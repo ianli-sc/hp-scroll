@@ -37,7 +37,7 @@ KISSY.add('gallery/hp-scroll/1.0/index', function(S, DOM, Event) {
             //管理mouseenter，mouseleave两个个响应
             Event.on = function(targets, type, fn, context) {
                 var customFun = fn;
-                if (/[mouseenter | mouseleave]/.test(type)) {
+                if (/mouseenter|mouseleave/.test(type)) {
                     fn = function(e) {
                         //如果在scroll进行中就啥都不干， 否则就触发其定义的内容
                         if (inScroll) {
